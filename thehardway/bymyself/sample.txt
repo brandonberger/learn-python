@@ -1,0 +1,7 @@
+First, let's use a migration to define a database 
+table to hold all of our tasks. Laravel's database migrations 
+provide an easy way to define your database table 
+structure and modifications using fluent, expressive PHP code. 
+Instead of telling your team members to manually add 
+columns to their local copy of the database, your teammates can 
+simply run the migrations you push into source control.
