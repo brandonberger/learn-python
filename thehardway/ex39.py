@@ -1,3 +1,4 @@
+# dict of states & abbreviations
 states = {
 	'Oregon': 'OR',
 	'Florida': 'FL',
@@ -6,12 +7,14 @@ states = {
 	'Michigan': 'MI'
 }
 
+# dict of state abbrev & cities
 cities = {
 	'CA': 'San Francisco',
 	'MI': 'Detroit',
 	'FL': 'Jacksonville'
 }
 
+# asigns city to state abbrevation in city dict
 cities['NY'] = 'New York'
 cities['OR'] = 'Portland'
 
@@ -50,4 +53,4 @@ if not state:
 city = cities.get('TX', 'Does not exist')
 print "The city for the state 'TX' is: %s" % city
 
-	
+
