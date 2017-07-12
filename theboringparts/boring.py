@@ -464,25 +464,88 @@
 # 	print('Key: ' + k + ' Value: ' + str(v))
 
 
-spam = {'name': 'Zophie', 'age': 7}
-print('name' in spam.keys())
-print('Zophie' in spam.values())
-print('color' in spam.keys())
-print('color' not in spam.keys())
-print('color' in spam)
+# spam = {'name': 'Zophie', 'age': 7}
+# # print('name' in spam.keys())
+# # print('Zophie' in spam.values())
+# # print('color' in spam.keys())
+# # print('color' not in spam.keys())
+# # print('color' in spam)
+# # print('Zophie' in spam)
 
 
+# picnicItems = {'apples': 5, 'cups': 2}
+# print('I am bringing ' + str(picnicItems.get('cups', 'no')) + ' cups.')
+# print('I am bringing ' + str(picnicItems.get('eggs', 'no')) + ' eggs')
 
 
+# spam = {'name': 'Pooka', 'age': 5}
+# sd = spam.setdefault('color', 'black')
+# print(sd)
+# print(spam)
+# sd = spam.setdefault('color', 'white')
+# print(sd)
+
+# import pprint
+# message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+# count = {}
+# for character in message:
+# 	count.setdefault(character, 0)
+# 	count[character] = count[character] + 1
+# print(count.values())
 
 
+# import pprint
+# message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
+
+# count = {}
+# for character in message:
+# 	count.setdefault(character, 0)
+# 	count[character] = count[character] + 1
+	
+# #pprint.pprint(count)
+# print(pprint.pformat(count))
 
 
+# theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
+#             'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
+#             'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
+
+# def printBoard(board):
+#     print(board['top-L'] + '' + board['top-M'] + '|' + board['top-R'])
+#     print('-+-+-')
+#     print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+#     print('-+-+-')
+#     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+
+# turn = 'X'
+# for i in range(9):
+# 	printBoard(theBoard)
+# 	print('Turn for ' + turn + '. Move on which space?')
+# 	move = input()
+# 	theBoard[move] = turn
+# 	if turn == 'X':
+# 		turn = 'O'
+# 	else:
+# 		turn = 'X'
+# printBoard(theBoard)
 
 
+allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
+			 'Bob': {'ham sandwiches': 3, 'apples': 2},
+			 'Carol': {'cups': 3, 'apple pies': 1}}
 
+def totalBrought(guests, item):
+	numBrought = 0
+	for k, v in guests.items():
+		numBrought = numBrought + v.get(item, 9)
+	return numBrought
 
-
+print('Number of things being brought:')
+print(' - Apples ' + str(totalBrought(allGuests, 'apples')))
+print(' - Cups ' + str(totalBrought(allGuests, 'cups')))
+print(' - Cakes ' + str(totalBrought(allGuests, 'cakes')))
+print(' - Ham Sandwiches ' + str(totalBrought(allGuests, 'ham sandwiches')))
+print(' - Apple Pies ' + str(totalBrought(allGuests, 'apple pies')))
 
 
 
