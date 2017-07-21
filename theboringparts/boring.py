@@ -530,29 +530,95 @@
 # printBoard(theBoard)
 
 
-allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
-			 'Bob': {'ham sandwiches': 3, 'apples': 2},
-			 'Carol': {'cups': 3, 'apple pies': 1}}
+# allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
+# 			 'Bob': {'ham sandwiches': 3, 'apples': 2},
+# 			 'Carol': {'cups': 3, 'apple pies': 1}}
 
-def totalBrought(guests, item):
-	numBrought = 0
-	for k, v in guests.items():
-		numBrought = numBrought + v.get(item, 9)
-	return numBrought
+# def totalBrought(guests, item):
+# 	numBrought = 0
+# 	for k, v in guests.items():
+# 		numBrought = numBrought + v.get(item, 9)
+# 	return numBrought
 
-print('Number of things being brought:')
-print(' - Apples ' + str(totalBrought(allGuests, 'apples')))
-print(' - Cups ' + str(totalBrought(allGuests, 'cups')))
-print(' - Cakes ' + str(totalBrought(allGuests, 'cakes')))
-print(' - Ham Sandwiches ' + str(totalBrought(allGuests, 'ham sandwiches')))
-print(' - Apple Pies ' + str(totalBrought(allGuests, 'apple pies')))
-
-
+# print('Number of things being brought:')
+# print(' - Apples ' + str(totalBrought(allGuests, 'apples')))
+# print(' - Cups ' + str(totalBrought(allGuests, 'cups')))
+# print(' - Cakes ' + str(totalBrought(allGuests, 'cakes')))
+# print(' - Ham Sandwiches ' + str(totalBrought(allGuests, 'ham sandwiches')))
+# print(' - Apple Pies ' + str(totalBrought(allGuests, 'apple pies')))
 
 
+"""inventory = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
+def displayInventory(inventory):
+	total = 0
+	for i, n in inventory.items():
+		total = total + n
+		amount = str(n)
+		thing = i
+		print(amount + ' ' + thing)
+	return total
+
+print('Total number of items: ' + str(displayInventory(inventory)))
+"""
+
+# print('How are you?')
+# feeling = input()
+# if feeling.lower() == 'great':
+# 	print('I feel great too.')
+# else:
+# 	print('I hope the rest of your day is good.')
 
 
+# while True:
+# 	print('Enter your age:')
+# 	age = input()
+# 	if age.isdecimal():
+# 		break
+# 	print('Please enter a number for your age.')
 
+# while True:
+# 	print('Select a new password (letters and numbers only):')
+# 	password = input()
+# 	if password.isalnum():
+# 		break
+# 	print('Passwords can only have letters and numbers.')
+
+
+# # splicer = ', '
+# splicer = ' $ '
+# wordList = ['Kava', 'Kratom', 'Coffee', 'Soda']
+# text = splicer.join(wordList)
+# print(text)
+
+# text = text.split(' $ ')
+# # print(text)
+
+# def printPicnic(itemsDict, leftWidth, rightWidth):
+# 	print('PICNIC ITEMS'.center(leftWidth + rightWidth, '-'))
+# 	for k, v in itemsDict.items():
+# 		print(k.ljust(leftWidth, '.') + str(v).rjust(rightWidth))
+
+# picnicItems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
+# printPicnic(picnicItems, 12, 5)
+# printPicnic(picnicItems, 20, 6)
+
+
+def makeTable(title, items):
+	centerLength = len(title) * 2
+	# if length is an odd number add 1
+	if centerLength % 2 != 0:
+		centerLength = centerLength + 1
+
+	finalTable = title.center(centerLength, '-')
+	finalTable = finalTable + '\n'
+	for i, v in items.items():
+		finalTable = finalTable + i.ljust(centerLength, '.') + str(v).rjust(centerLength, ' ') + '\n'
+	return finalTable
+
+title = 'Bula'
+items = {'Kava': 4, 'Kratom': 12, 'Coffee': 2}
+table = makeTable(title, items)
+print(table)
 
 
 
