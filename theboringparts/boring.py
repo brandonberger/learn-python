@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 #### Continue statement ####
 # while True:
 # 	print('Who are you?')
@@ -603,24 +605,35 @@ print('Total number of items: ' + str(displayInventory(inventory)))
 # printPicnic(picnicItems, 20, 6)
 
 
-def makeTable(title, items):
-	centerLength = len(title) * 2
-	# if length is an odd number add 1
-	if centerLength % 2 != 0:
-		centerLength = centerLength + 1
+# def makeTable(title, items):
+# 	centerLength = len(title) * 2
+# 	# if length is an odd number add 1
+# 	if centerLength % 2 != 0:
+# 		centerLength = centerLength + 1
 
-	finalTable = title.center(centerLength, '-')
-	finalTable = finalTable + '\n'
-	for i, v in items.items():
-		finalTable = finalTable + i.ljust(centerLength, '.') + str(v).rjust(centerLength, ' ') + '\n'
-	return finalTable
-
-title = 'Bula'
-items = {'Kava': 4, 'Kratom': 12, 'Coffee': 2}
-table = makeTable(title, items)
-print(table)
-
-
+# 	finalTable = title.center(centerLength, '-')
+# 	finalTable = finalTable + '\n'
+# 	for i, v in items.items():
+# 		finalTable = finalTable + i.ljust(centerLength, '.') + str(v).rjust(centerLength, ' ') + '\n'
+# 	return finalTable
+	
+# title = 'Bula'
+# items = {'Kava': 4, 'Kratom': 12, 'Coffee': 2}
+# table = makeTable(title, items)
+# print(table)
 
 
+# spam = '	Hello World 	'
+# # spam = spam.strip()
+# # spam = spam.lstrip()
+# spam.rstrip()
+# print(spam)
 
+# spam = 'SpamSpamBaconSpamEggsSpamSpam'
+# spam = spam.strip('SpamSpamBaconSpam')
+# print(spam)
+
+import pyperclip
+# pyperclip.copy('Hello world!')
+pasted = pyperclip.paste()
+print(pasted)
